@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+  web_0:
+    build: .
+    command:
+      - /bin/bash
+      - -c
+      - |
+        ./etcd-init.sh 0
+        perl -Ilib ./myapp.pl prefork
+    ports:
+      - 9010:3000
+
+  web_1:
+    build: .
+    command:
+      - /bin/bash
+      - -c
+      - |
+        ./etcd-init.sh 1
+        perl -Ilib ./myapp.pl prefork
+    ports:
+      - 9011:3000
+
+  web_2:
+    build: .
+    command:
+      - /bin/bash
+      - -c
+      - |
+        ./etcd-init.sh 2
+        perl -Ilib ./myapp.pl prefork
+    ports:
+      - 9012:3000
