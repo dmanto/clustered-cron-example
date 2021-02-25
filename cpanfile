@@ -1,2 +1,2 @@
-requires 'Mojolicious';
-requires 'Mojolicious::Plugin::Cron';
+requires 'Mojolicious', '9.0';
+requires 'Mojolicious::Plugin::Cron', '0.032';
