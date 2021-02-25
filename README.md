@@ -18,7 +18,7 @@ amount of RAM available (>= 8GB I guess)
 * git clone the project and cd to it, then run this command:
 
 ```shell
-docker-compose up -d
+docker-compose up
 ```
 * after downloading, building and starting, you should see that etcd initializes ok with 3 nodes.
 * then you should receive 1 warn every 10 seconds, with the simulated Cron job results
